@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Pecunia Potentia Reventia LLC develops evidence-backed software, data, and operational intelligence systems for regulated and public-sector environments."
+  />
+
+  <title>Pecunia Potentia Reventia LLC</title>
+
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #111827;
+      --muted: #5f6b7a;
+      --border: #dfe3e8;
+      --accent: #1f4f82;
+      --accent-dark: #163b62;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-weight: 750;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #374151;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 110px 0 90px;
+      background:
+        linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #f7f8fa 100%
+        );
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      max-width: 850px;
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      margin: 0 0 24px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 1.2rem;
+      color: var(--muted);
+      margin: 0 0 32px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 6px;
+      font-weight: 700;
+      border: 1px solid var(--accent);
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .button.primary:hover {
+      background: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: var(--accent);
+    }
+
+    section {
+      padding: 86px 0;
+    }
+
+    section.white {
+      background: var(--surface);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+      margin: 0 0 14px;
+    }
+
+    .section-heading p,
+    .muted {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 26px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .nitora {
+      border-left: 4px solid var(--accent);
+      padding-left: 28px;
+      max-width: 900px;
+    }
+
+    .nitora p {
+      font-size: 1.08rem;
+      color: var(--muted);
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+
+    .contact-box {
+      background: #111827;
+      color: #fff;
+      border-radius: 10px;
+      padding: 42px;
+    }
+
+    .contact-box p {
+      color: #d1d5db;
+    }
+
+    .contact-box a {
+      color: #93c5fd;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0 44px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      .grid,
+      .details {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      PECUNIA POTENTIA <span>REVENTIA</span>
+    </div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#nitora">Nitora Federal</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Software • Data • Operational Intelligence</div>
+
+      <h1>
+        Evidence-backed software for complex operational decisions.
+      </h1>
+
+      <p>
+        Pecunia Potentia Reventia LLC develops software, data, workflow,
+        and operational-intelligence systems designed for environments
+        where traceability, evidence preservation, accountability, and
+        reproducibility matter.
+      </p>
+
+      <div class="buttons">
+        <a class="button primary" href="#capabilities">
+          View Capabilities
+        </a>
+
+        <a class="button secondary"
+           href="mailto:Elliot@pecuniapotentiareventia.dev">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="about" class="white">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">About</div>
+
+        <h2>Pecunia Potentia Reventia LLC</h2>
+
+        <p>
+          We build focused technology products that help organizations
+          reconcile fragmented information, preserve evidence, automate
+          repeatable workflows, and support accountable human decision-making.
+        </p>
+      </div>
+
+      <div class="details">
+
+        <div>
+          <h3>Our approach</h3>
+
+          <p class="muted">
+            Our systems emphasize deterministic processing, source
+            provenance, auditability, explicit uncertainty, and clear
+            boundaries between machine-generated information and
+            human authority.
+          </p>
+        </div>
+
+        <div>
+          <h3>Federal and regulated environments</h3>
+
+          <p class="muted">
+            We are developing capabilities for public-sector and regulated
+            operational environments where evidence integrity, data
+            reconciliation, workflow transparency, and security-conscious
+            design are essential.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="capabilities">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">Capabilities</div>
+
+        <h2>What we build</h2>
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Data Reconciliation</h3>
+          <p>
+            Normalize, connect, version, and reconcile records from
+            multiple authoritative or operational data sources.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Evidence & Provenance</h3>
+          <p>
+            Preserve source history, hashes, decision context, audit
+            records, and reproducible evidence packages.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Operational Intelligence</h3>
+          <p>
+            Convert fragmented data into bounded, reviewable machine
+            states that support human investigation and follow-up.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Workflow Automation</h3>
+          <p>
+            Reduce repetitive work while maintaining explicit ownership,
+            review, exception handling, and human approval.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Systems Integration</h3>
+          <p>
+            Connect APIs, databases, operational systems, and evidence
+            repositories through structured integration layers.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Measurement & Validation</h3>
+          <p>
+            Design same-case evaluation workflows that compare manual and
+            software-assisted processes using predefined measures and
+            independent review.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="nitora" class="white">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">Flagship Capability</div>
+
+        <h2>Nitora Federal</h2>
+      </div>
+
+      <div class="nitora">
+
+        <p>
+          <strong>Nitora Federal</strong> is a cross-program recall
+          intelligence, exposure-resolution, and recall-effectiveness
+          evidence layer designed to help authorized teams understand
+          where recalled products may remain in commerce, reconcile
+          multiple recall records, prioritize follow-up, and preserve
+          the evidence behind those decisions.
+        </p>
+
+        <p>
+          Nitora Federal is designed to complement—not replace—source
+          systems and organizational authority. Regulatory, compliance,
+          exposure, and recall-effectiveness determinations remain with
+          authorized personnel.
+        </p>
+
+        <p>
+          Current work focuses on controlled evaluation, deterministic
+          evidence handling, source provenance, measurable workflow
+          performance, and independent review.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <div class="container">
+
+      <div class="contact-box">
+
+        <div class="eyebrow" style="color:#93c5fd;">
+          Contact
+        </div>
+
+        <h2>Discuss a capability or pilot.</h2>
+
+        <p>
+          For federal contracting, technology partnerships, pilot
+          discussions, or general business inquiries:
+        </p>
+
+        <p>
+          <strong>Elliot Ruiz</strong><br>
+          Sole Member<br>
+          PECUNIA POTENTIA REVENTIA LLC
+        </p>
+
+        <p>
+          <a href="mailto:Elliot@pecuniapotentiareventia.dev">
+            Elliot@pecuniapotentiareventia.dev
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<footer>
+  <div class="container">
+    © 2026 PECUNIA POTENTIA REVENTIA LLC.
+    All rights reserved.
+    <br><br>
+    Nitora Federal is an independently developed software capability.
+    References to U.S. government agencies or public government data do
+    not imply endorsement, certification, authorization, or procurement
+    by any government agency.
+  </div>
+</footer>
+
+</body>
+</html>
