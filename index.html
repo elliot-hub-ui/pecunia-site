@@ -57,11 +57,6 @@
       text-decoration: underline;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
     .container {
       width: min(92%, var(--max));
       margin: 0 auto;
@@ -84,29 +79,15 @@
       gap: 28px;
     }
 
-    .brand-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--text);
-      font-weight: 800;
-      letter-spacing: -0.03em;
+    .brand {
+      color: var(--navy);
+      font-weight: 850;
+      letter-spacing: -0.025em;
+      font-size: 1rem;
     }
 
-    .brand-logo:hover {
+    .brand:hover {
       text-decoration: none;
-    }
-
-    .brand-logo img {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-    }
-
-    .brand-logo span {
-      white-space: nowrap;
-      font-size: 0.95rem;
-      letter-spacing: 0.01em;
     }
 
     nav {
@@ -127,7 +108,7 @@
     }
 
     .hero {
-      padding: 115px 0 95px;
+      padding: 125px 0 105px;
       background:
         radial-gradient(
           circle at top right,
@@ -141,11 +122,8 @@
         );
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 70px;
-      align-items: center;
+    .hero-content {
+      max-width: 920px;
     }
 
     .eyebrow {
@@ -158,11 +136,11 @@
     }
 
     h1 {
-      max-width: 850px;
-      font-size: clamp(2.9rem, 6vw, 5.4rem);
+      font-size: clamp(3rem, 6vw, 5.5rem);
       line-height: 1.02;
       letter-spacing: -0.055em;
       margin: 0 0 24px;
+      max-width: 980px;
     }
 
     .hero p {
@@ -170,17 +148,6 @@
       font-size: 1.2rem;
       color: var(--muted);
       margin: 0 0 34px;
-    }
-
-    .hero-logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-logo img {
-      width: min(100%, 420px);
-      border-radius: 20px;
     }
 
     .buttons {
@@ -379,7 +346,6 @@
     }
 
     @media (max-width: 900px) {
-      .hero-grid,
       .nitora-panel,
       .details,
       .contact-row {
@@ -388,14 +354,6 @@
 
       .grid {
         grid-template-columns: 1fr 1fr;
-      }
-
-      .hero-logo {
-        order: -1;
-      }
-
-      .hero-logo img {
-        width: 240px;
       }
     }
 
@@ -409,16 +367,11 @@
       }
 
       .hero {
-        padding-top: 75px;
+        padding-top: 80px;
       }
 
-      .brand-logo span {
-        display: none;
-      }
-
-      .brand-logo img {
-        width: 44px;
-        height: 44px;
+      .brand {
+        font-size: 0.92rem;
       }
 
       .nitora-panel,
@@ -434,9 +387,8 @@
 <header>
   <div class="container nav">
 
-    <a href="#" class="brand-logo">
-      <img src="logo.png" alt="Pecunia Potentia Reventia logo">
-      <span>PECUNIA POTENTIA REVENTIA</span>
+    <a href="#" class="brand">
+      PECUNIA POTENTIA REVENTIA
     </a>
 
     <nav>
@@ -453,9 +405,9 @@
 <main>
 
   <section class="hero">
-    <div class="container hero-grid">
+    <div class="container">
 
-      <div>
+      <div class="hero-content">
 
         <div class="eyebrow">
           Software • Data • Operational Intelligence
@@ -487,13 +439,6 @@
 
         </div>
 
-      </div>
-
-      <div class="hero-logo">
-        <img
-          src="logo.png"
-          alt="Pecunia Potentia Reventia emblem"
-        >
       </div>
 
     </div>
